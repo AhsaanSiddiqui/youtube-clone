@@ -30,12 +30,14 @@ const UserDropdown = () => {
   return (
     <div className="relative" ref={dropdownRef}>
       <div 
-        className="flex items-center space-x-2 cursor-pointer hover:bg-gray-700 p-2 rounded-lg transition-colors"
+        className="group flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded-lg transition-colors hover:text-black"
         onClick={toggleDropdown}
       >
-        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full"></div>
+        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full">
+          <img src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face' alt="User" className="w-full h-full object-cover rounded-full" />
+        </div>
         <span className="font-medium">Suryawachid.77</span>
-        <i className={`fas fa-chevron-down text-sm text-gray-400 transition-transform duration-200 ${
+        <i className={`fas fa-chevron-down text-sm text-white group-hover:text-black transition-transform duration-200 ${
           isOpen ? 'rotate-180' : ''
         }`}></i>
       </div>

@@ -79,7 +79,7 @@ const MainContent = ({ sidebarExpanded }) => {
   }
 
   return (
-    <main className={`flex-1 bg-gray-900 min-h-screen transition-all duration-500 ease-in-out ${
+    <main className={`flex-1 min-h-screen transition-all duration-500 ease-in-out bg-brown-950 ${
       sidebarExpanded ? 'ml-0' : 'ml-0'
     }`}>
       {/* Featured Video/Hero Section - Now using BannerSlider */}
@@ -95,10 +95,10 @@ const MainContent = ({ sidebarExpanded }) => {
             <button
               key={category}
               onClick={() => handleTabClick(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 border ${
                 activeFilter === category
-                  ? 'bg-purple-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105'
+                  ? 'bg-white text-black shadow-lg scale-105'
+                  : 'text-white hover:bg-white hover:text-black hover:scale-105'
               }`}
             >
               {category}

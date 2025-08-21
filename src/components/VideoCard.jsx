@@ -23,7 +23,7 @@ const VideoCard = ({ video }) => {
 
   return (
     <div 
-      className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-700 transition-all duration-200 cursor-pointer hover:scale-105"
+      className="bg-brown-950 rounded-lg overflow-hidden transition-all duration-200 cursor-pointer hover:scale-105"
       onClick={handleVideoClick}
     >
       <div className="aspect-video relative overflow-hidden">

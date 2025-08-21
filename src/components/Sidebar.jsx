@@ -51,24 +51,24 @@ const Sidebar = ({ expanded }) => {
   ]
 
   return (
-    <aside className={`bg-gray-800 border-r border-gray-700 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
+    <aside className={`bg-brown-950 border-r border-gray-500 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
       expanded ? 'w-56' : 'w-14'
     }`}>
       {/* Top Icons Section */}
       <div className="space-y-4">
         {navigationItems.map((item, index) => (
-          <div key={index} className={`${expanded ? 'flex items-center' : 'flex items-center justify-center'}`}>
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-300 ${
+          <div key={index} className={`flex cursor-pointer items-center ${expanded ? 'ml-2' : 'justify-center'}`}>
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center cursor-pointer ${
               item.active 
-                ? 'bg-gray-700' 
-                : 'bg-gray-800 hover:bg-gray-700'
+                ? 'bg-white hover:bg-white' 
+                : 'hover:bg-white'
             }`}>
-              <i className={`${item.icon} text-lg transition-all duration-300 ${
-                item.active ? 'text-purple-400' : 'text-gray-400'
+              <i className={`${item.icon} text-lg ${
+                item.active ? 'text-black' : 'text-white hover:text-black'
               }`}></i>
             </div>
             {expanded && (
-              <span className="text-sm text-gray-300 ml-2 transition-all duration-500 opacity-100 transform translate-x-0">
+              <span className="text-sm text-gray-300 ml-2 opacity-100 transform translate-x-0">
                 {item.label}
               </span>
             )}
@@ -77,9 +77,9 @@ const Sidebar = ({ expanded }) => {
       </div>
       
       {/* Following Section */}
-      <div className="mt-8 pt-6 border-t border-gray-700">
-        <div className={`mb-4 transition-all duration-500 ${expanded ? 'text-left px-4 opacity-100' : 'text-center opacity-70'}`}>
-          <span className="text-xs text-gray-400 font-medium">
+      <div className="mt-8 pt-6">
+        <div className={`mb-4 ${expanded ? 'text-left px-4' : 'text-center'}`}>
+          <span className="text-xs text-white font-medium">
             {expanded ? 'Following Channels' : 'Following'}
           </span>
         </div>
@@ -105,7 +105,7 @@ const Sidebar = ({ expanded }) => {
                 )}
               </div>
               {expanded && (
-                <span className="text-sm text-gray-300 transition-all duration-500 opacity-100 transform translate-x-0">
+                <span className="text-sm text-gray-300 opacity-100 transform translate-x-0">
                   {user.name}
                 </span>
               )}
@@ -114,11 +114,11 @@ const Sidebar = ({ expanded }) => {
           
           {/* More Arrow */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 cursor-pointer">
               <i className="fas fa-chevron-down text-gray-400"></i>
             </div>
             {expanded && (
-              <span className="text-sm text-gray-300 transition-all duration-500 opacity-100 transform translate-x-0">
+              <span className="text-sm text-gray-300 opacity-100 transform translate-x-0">
                 Show more
               </span>
             )}
@@ -128,19 +128,19 @@ const Sidebar = ({ expanded }) => {
 
       {/* Expanded Content */}
       {expanded && (
-        <div className="mt-8 pt-6 border-t border-gray-700 px-4 transition-all duration-500 opacity-100 transform translate-y-0">
+        <div className="mt-8 pt-6 border-t border-gray-700 px-4 opacity-100 transform translate-y-0">
           <div className="space-y-4">
             <div className="text-sm text-gray-400 font-medium">Quick Actions</div>
             <div className="space-y-2">
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded transition-all duration-200">
+              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
                 <i className="fas fa-plus mr-2"></i>
                 Create Channel
               </button>
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded transition-all duration-200">
+              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
                 <i className="fas fa-download mr-2"></i>
                 Download App
               </button>
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded transition-all duration-200">
+              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
                 <i className="fas fa-star mr-2"></i>
                 Premium Features
               </button>

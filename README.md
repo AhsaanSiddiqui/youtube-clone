@@ -1,4 +1,4 @@
-# Essence Of Me - React Video Platform
+# Project Name - React Video Platform
 
 A modern YouTube-style video platform built with React.js and Tailwind CSS, featuring a dark theme and responsive design.
 
