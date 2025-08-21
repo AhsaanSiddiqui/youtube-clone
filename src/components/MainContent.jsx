@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import VideoCard from './VideoCard'
 import BannerSlider from './BannerSlider'
 import ShortsSlider from './ShortsSlider'
+import VideoCard from './VideoCard'
 
 const MainContent = ({ sidebarExpanded }) => {
   const [activeFilter, setActiveFilter] = useState('All Video')
@@ -95,10 +95,10 @@ const MainContent = ({ sidebarExpanded }) => {
             <button
               key={category}
               onClick={() => handleTabClick(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 border ${
+              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 ${
                 activeFilter === category
-                  ? 'bg-white text-black shadow-lg scale-105'
-                  : 'text-white hover:bg-white hover:text-black hover:scale-105'
+                  ? 'bg-brown-950 text-white shadow-lg scale-105'
+                  : 'text-white hover:bg-gray-600 hover:scale-105'
               }`}
             >
               {category}

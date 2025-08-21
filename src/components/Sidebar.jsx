@@ -105,7 +105,7 @@ const Sidebar = ({ expanded }) => {
                 )}
               </div>
               {expanded && (
-                <span className="text-sm text-gray-300 opacity-100 transform translate-x-0">
+                <span className="text-sm text-gray-300 opacity-100 transform translate-y-0">
                   {user.name}
                 </span>
               )}
@@ -118,7 +118,7 @@ const Sidebar = ({ expanded }) => {
               <i className="fas fa-chevron-down text-gray-400"></i>
             </div>
             {expanded && (
-              <span className="text-sm text-gray-300 opacity-100 transform translate-x-0">
+              <span className="text-sm text-gray-300 opacity-100 transform translate-y-0">
                 Show more
               </span>
             )}
