@@ -44,7 +44,7 @@ const VideoCard = ({ video }) => {
         </div>
       </div>
       <div className="py-4">
-        <h3 className="font-medium text-[20px] text-base mb-3 line-clamp-2 text-white leading-tight">{video.title}</h3>
+        <h3 className="font-medium text-[20px] mb-3 line-clamp-2 text-white leading-tight">{video.title}</h3>
         <div className="flex items-center space-x-2 mb-2">
           <div className="w-9 h-9 rounded-full overflow-hidden">
             <img 
