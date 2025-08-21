@@ -58,7 +58,7 @@ const ShortsSlider = () => {
   return (
     <section className="mb-8 px-4">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold">Shorts</h2>
+        <h2 className="text-3xl font-medium text-white">Shorts</h2>
         <div className="flex space-x-2">
           {/* Scroll to Start/End buttons */}
           <button 

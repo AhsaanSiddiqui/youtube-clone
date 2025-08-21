@@ -26,9 +26,9 @@ const Header = ({ onMenuClick }) => {
           
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            {/* <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               <i className="fas fa-leaf text-white text-sm"></i>
-            </div>
+            </div> */}
             <span className="text-xl font-bold">Logo Here</span>
           </div>
         </div>
@@ -46,6 +46,13 @@ const Header = ({ onMenuClick }) => {
               />
               <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white group-focus-within:text-black"></i>
             </form>
+          </div>
+          
+          {/* Notification Icon */}
+          <div className="flex items-center mr-4">
+            <button className="w-10 h-10 bg-white hover:bg-amber-200 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105">
+              <i className="fas fa-bell text-black text-lg"></i>
+            </button>
           </div>
           
           {/* Right Section - User Profile */}

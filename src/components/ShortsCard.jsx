@@ -42,7 +42,7 @@ const ShortsCard = ({ short }) => {
         </div>
       </div>
       <div className="p-2">
-        <h3 className="font-medium text-xs mb-1 line-clamp-2">{short.title}</h3>
+        <h3 className="font-semibold text-[20px] mb-1 line-clamp-2">{short.title}</h3>
         <p className="text-xs text-gray-400">{short.views} • {short.time}</p>
       </div>
     </div>

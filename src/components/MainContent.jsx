@@ -23,19 +23,19 @@ const MainContent = ({ sidebarExpanded }) => {
     },
     {
       id: 2,
-      title: 'Meditation Techniques for Beginners',
-      creator: 'MindfulCreator',
-      views: '15K views',
-      time: '2 days ago',
-      category: 'One Shoot',
+      title: 'Epic Adventures in League of Darknes: Live Gameplay',
+      creator: 'Selly durinto',
+      views: '27K views',
+      time: '1 day ago',
+      category: 'League of Darknes',
       image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=225&fit=crop&crop=center'
     },
     {
       id: 3,
-      title: 'Track Running: Speed Training Tips',
-      creator: 'FitnessPro',
-      views: '42K views',
-      time: '3 days ago',
+      title: 'Epic Adventures in Adventure Island: Live Gameplay',
+      creator: 'Jonesy',
+      views: '27K views',
+      time: '1 day ago',
       category: 'Adventure island',
       image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=225&fit=crop&crop=center'
     },
@@ -86,21 +86,21 @@ const MainContent = ({ sidebarExpanded }) => {
       <BannerSlider />
 
       {/* Popular Videos Section */}
-      <section className="mb-8 px-4">
-        <h2 className="text-xl font-bold mb-4">Popular Videos</h2>
+      <section className="mb-8 px-6">
+        <h2 className="text-3xl font-medium mb-6 text-white">Popular Videos</h2>
         
         {/* Filter Categories */}
-        <div className="flex space-x-3 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="flex space-x-3 mb-8 overflow-x-auto pb-2 scrollbar-hide">
           {filterCategories.map((category) => (
             <button
-              key={category}
-              onClick={() => handleTabClick(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 ${
-                activeFilter === category
-                  ? 'bg-brown-950 text-white shadow-lg scale-105'
-                  : 'text-white hover:bg-gray-600 hover:scale-105'
-              }`}
-            >
+            key={category}
+            onClick={() => handleTabClick(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 border ${
+              activeFilter === category
+                ? 'bg-white text-black shadow-lg scale-105'
+                : 'text-white hover:bg-white hover:text-black hover:scale-105'
+            }`}
+          >
               {category}
             </button>
           ))}
@@ -126,8 +126,8 @@ const MainContent = ({ sidebarExpanded }) => {
       <ShortsSlider />
 
       {/* Additional Video Sections */}
-      <section className="mb-8 px-4">
-        <h2 className="text-xl font-bold mb-4">More Videos</h2>
+      <section className="mb-8 px-6">
+        <h2 className="text-3xl font-medium mb-6 text-white">More Videos</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {popularVideos.map((video) => (
             <VideoCard key={`additional-${video.id}`} video={video} />

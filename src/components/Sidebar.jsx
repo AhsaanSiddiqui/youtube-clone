@@ -112,17 +112,6 @@ const Sidebar = ({ expanded }) => {
             </div>
           ))}
           
-          {/* More Arrow */}
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 cursor-pointer">
-              <i className="fas fa-chevron-down text-gray-400"></i>
-            </div>
-            {expanded && (
-              <span className="text-sm text-gray-300 opacity-100 transform translate-y-0">
-                Show more
-              </span>
-            )}
-          </div>
         </div>
       </div>
 

@@ -23,10 +23,10 @@ const VideoCard = ({ video }) => {
 
   return (
     <div 
-      className="bg-brown-950 rounded-lg overflow-hidden transition-all duration-200 cursor-pointer hover:scale-105"
+      className="bg-brown-950 overflow-hidden transition-all duration-200 cursor-pointer hover:scale-105"
       onClick={handleVideoClick}
     >
-      <div className="aspect-video relative overflow-hidden">
+      <div className="aspect-video relative overflow-hidden border rounded-lg">
         <img 
           src={getDummyImage(video.id)} 
           alt={video.title}
@@ -43,13 +43,24 @@ const VideoCard = ({ video }) => {
           12:34
         </div>
       </div>
-      <div className="p-4">
-        <h3 className="font-medium text-sm mb-2 line-clamp-2">{video.title}</h3>
-        <div className="flex items-center space-x-2 text-sm text-gray-400">
-          <span>{video.creator}</span>
-          <i className="fas fa-check-circle text-blue-500 text-xs"></i>
+      <div className="py-4">
+        <h3 className="font-medium text-[20px] text-base mb-3 line-clamp-2 text-white leading-tight">{video.title}</h3>
+        <div className="flex items-center space-x-2 mb-2">
+          <div className="w-9 h-9 rounded-full overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face" 
+              alt="Creator" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className='flex flex-col'>
+            <div className='flex items-center space-x-2'>
+              <span className="text-md text-white font-medium">{video.creator}</span>
+              <i className="fas fa-check-circle text-white text-md"></i>
+            </div>
+            <p className="text-sm text-gray-400">{video.views} • {video.time}</p>
+          </div>
         </div>
-        <p className="text-sm text-gray-400 mt-1">{video.views} • {video.time}</p>
       </div>
     </div>
   )
