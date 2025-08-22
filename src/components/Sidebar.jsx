@@ -1,4 +1,5 @@
 import React from 'react'
+import logoWhite from '/assets/logo-white.png'
 
 const Sidebar = ({ expanded }) => {
   const navigationItems = [
@@ -45,6 +46,7 @@ const Sidebar = ({ expanded }) => {
     <aside className={`bg-brown-950 border-r border-gray-500 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
       expanded ? 'w-56' : 'w-16'
     }`}>
+
       {/* Main Navigation Section */}
       <div className="space-y-1 px-2">
         {navigationItems.map((item, index) => (

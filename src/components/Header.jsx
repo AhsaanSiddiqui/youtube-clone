@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import UserDropdown from './UserDropdown'
+import logoDark from '/assets/logo-dark.png'
+import logoWhite from '/assets/logo-white.png'
 
 const Header = ({ onMenuClick }) => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -26,11 +28,7 @@ const Header = ({ onMenuClick }) => {
           
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            {/* <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <i className="fas fa-leaf text-white text-sm"></i>
-            </div> */}
-            {/* <span className="text-xl font-bold">Logo Here</span> */}
-            <img src='./assets/logo.png' alt="Logo" className='w-10 h-10' />
+            <img src={logoWhite} alt="Logo" className="w-48" />
           </div>
         </div>
         
