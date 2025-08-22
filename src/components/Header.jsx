@@ -29,7 +29,8 @@ const Header = ({ onMenuClick }) => {
             {/* <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               <i className="fas fa-leaf text-white text-sm"></i>
             </div> */}
-            <span className="text-xl font-bold">Logo Here</span>
+            {/* <span className="text-xl font-bold">Logo Here</span> */}
+            <img src='./assets/logo.png' alt="Logo" className='w-10 h-10' />
           </div>
         </div>
         

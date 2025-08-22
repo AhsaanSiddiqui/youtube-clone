@@ -3,72 +3,59 @@ import React from 'react'
 const Sidebar = ({ expanded }) => {
   const navigationItems = [
     { icon: 'fas fa-home', label: 'Home', active: true },
-    { icon: 'fas fa-envelope', label: 'Messages' },
-    { icon: 'fas fa-bell', label: 'Alerts' },
-    { icon: 'fas fa-calendar', label: 'Calendar' },
-    { icon: 'fas fa-users', label: 'Users' },
-    { icon: 'fas fa-cog', label: 'Settings' },
-    { icon: 'fas fa-upload', label: 'Upload' }
+    { icon: 'fas fa-play', label: 'Shorts' },
+    { icon: 'fa-solid fa-photo-film', label: 'Subscriptions' },
+    { icon: 'fas fa-user', label: 'You' },
+    { icon: 'fas fa-download', label: 'Downloads' }
   ]
 
-  const followingUsers = [
+  const youSectionItems = [
+    { icon: 'fas fa-history', label: 'History' },
+    { icon: 'fas fa-list', label: 'Playlists' },
+    { icon: 'fas fa-video', label: 'Your videos' },
+    { icon: 'fas fa-clock', label: 'Watch Later' },
+    { icon: 'fas fa-thumbs-up', label: 'Liked videos' },
+    { icon: 'fas fa-download', label: 'Downloads' }
+  ]
+
+  const subscriptionChannels = [
     { 
-      name: 'Alex', 
+      name: 'Shahid Naeem', 
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-      verified: true,
-      online: true
+      hasNotification: true
     },
     { 
-      name: 'Sarah', 
+      name: 'Chai aur Code', 
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face',
-      verified: false,
-      online: true
+      hasNotification: true
     },
     { 
-      name: 'Mike', 
+      name: 'JavaScript Mastery', 
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
-      verified: true,
-      online: false
+      hasNotification: false
     },
     { 
-      name: 'Emma', 
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
-      verified: false,
-      online: true
-    },
-    { 
-      name: 'John', 
+      name: 'Dr Zakir Naik', 
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-      verified: false,
-      online: false
-    },
-    { 
-      name: 'Lisa', 
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face',
-      verified: true,
-      online: true
+      hasNotification: true
     }
   ]
 
   return (
     <aside className={`bg-brown-950 border-r border-gray-500 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
-      expanded ? 'w-56' : 'w-14'
+      expanded ? 'w-56' : 'w-16'
     }`}>
-      {/* Top Icons Section */}
-      <div className="space-y-4">
+      {/* Main Navigation Section */}
+      <div className="space-y-1 px-2">
         {navigationItems.map((item, index) => (
-          <div key={index} className={`flex cursor-pointer items-center ${expanded ? 'ml-2' : 'justify-center'}`}>
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center cursor-pointer ${
-              item.active 
-                ? 'bg-white hover:bg-white' 
-                : 'hover:bg-white'
-            }`}>
-              <i className={`${item.icon} text-lg ${
-                item.active ? 'text-black' : 'text-white hover:text-black'
-              }`}></i>
+          <div key={index} className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
+            item.active ? 'bg-white/20' : 'hover:bg-white/10'
+          }`}>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <i className={`${item.icon} text-lg text-white`}></i>
             </div>
             {expanded && (
-              <span className="text-sm text-gray-300 ml-2 opacity-100 transform translate-x-0">
+              <span className="text-sm text-white font-medium ml-3">
                 {item.label}
               </span>
             )}
@@ -76,67 +63,51 @@ const Sidebar = ({ expanded }) => {
         ))}
       </div>
       
-      {/* Following Section */}
-      <div className="mt-8 pt-6">
-        <div className={`mb-4 ${expanded ? 'text-left px-4' : 'text-center'}`}>
-          <span className="text-xs text-white font-medium">
-            {expanded ? 'Following Channels' : 'Following'}
-          </span>
+      {/* You Section */}
+      <div className="mt-6 pt-6 border-t border-gray-600">
+        <div className={`px-4 mb-4 ${expanded ? 'flex items-center justify-between' : 'text-center'}`}>
+          <span className="text-sm text-white font-medium">You</span>
+          {expanded && <i className="fas fa-chevron-right text-white text-sm"></i>}
         </div>
-        <div className="space-y-3 ml-2">
-          {followingUsers.map((user, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <div className="relative">
-                {/* Profile Image */}
-                <img 
-                  src={user.image} 
-                  alt={user.name}
-                  className="w-10 h-10 rounded-full object-cover border-2 border-gray-600 transition-all duration-300"
-                />
-                {/* Online Status - Green dot positioned on bottom left */}
-                {user.online && (
-                  <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-green-500 rounded-full border-2 border-gray-800 transition-all duration-300"></div>
-                )}
-                {/* Verified Badge - Blue checkmark on top right */}
-                {user.verified && (
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300">
-                    <i className="fas fa-check text-white text-xs"></i>
-                  </div>
-                )}
+        <div className="space-y-1 px-2">
+          {youSectionItems.map((item, index) => (
+            <div key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <i className={`${item.icon} text-lg text-white`}></i>
               </div>
               {expanded && (
-                <span className="text-sm text-gray-300 opacity-100 transform translate-y-0">
-                  {user.name}
-                </span>
+                <span className="text-sm text-white ml-3">{item.label}</span>
               )}
             </div>
           ))}
-          
         </div>
       </div>
 
-      {/* Expanded Content */}
-      {expanded && (
-        <div className="mt-8 pt-6 border-t border-gray-700 px-4 opacity-100 transform translate-y-0">
-          <div className="space-y-4">
-            <div className="text-sm text-gray-400 font-medium">Quick Actions</div>
-            <div className="space-y-2">
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
-                <i className="fas fa-plus mr-2"></i>
-                Create Channel
-              </button>
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
-                <i className="fas fa-download mr-2"></i>
-                Download App
-              </button>
-              <button className="w-full text-left text-sm text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded">
-                <i className="fas fa-star mr-2"></i>
-                Premium Features
-              </button>
-            </div>
-          </div>
+      {/* Subscriptions Section */}
+      <div className="mt-6 pt-6 border-t border-gray-600">
+        <div className={`px-4 mb-4 ${expanded ? 'text-left' : 'text-center'}`}>
+          <span className="text-sm text-white font-bold">Subscriptions</span>
         </div>
-      )}
+        <div className="space-y-1 px-2">
+          {subscriptionChannels.map((channel, index) => (
+            <div key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
+              <div className="relative">
+                <img 
+                  src={channel.image} 
+                  alt={channel.name}
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                {channel.hasNotification && (
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></div>
+                )}
+              </div>
+              {expanded && (
+                <span className="text-sm text-white ml-3">{channel.name}</span>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
     </aside>
   )
 }

@@ -21,10 +21,10 @@ const ShortsCard = ({ short }) => {
 
   return (
     <div 
-      className="w-full bg-brown-950 rounded-lg overflow-hidden transition-all duration-200 cursor-pointer hover:scale-105"
+      className="w-full bg-brown-950 overflow-hidden transition-all duration-200 cursor-pointer hover:scale-105"
       onClick={handleShortClick}
     >
-      <div className="aspect-[9/16] relative overflow-hidden">
+      <div className="aspect-[9/16] relative overflow-hidden border rounded-lg">
         <img 
           src={getDummyImage(short.id)} 
           alt={short.title}
