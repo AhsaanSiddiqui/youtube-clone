@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import ShortsCard from './ShortsCard'
+import ShortsNavigation from './ShortsNavigation'
 
 const ShortsSlider = () => {
   const sliderRef = useRef(null)
@@ -59,76 +60,26 @@ const ShortsSlider = () => {
     <section className="mb-8 px-4">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-3xl font-medium text-white">Shorts</h2>
-        <div className="flex space-x-2">
-          {/* Scroll to Start/End buttons */}
-          <button 
-            onClick={scrollToStart}
-            className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-200 text-xs hover:scale-110"
-            title="Go to start"
-          >
-            <i className="fas fa-angle-double-left"></i>
-          </button>
-          
-          <button 
-            onClick={scrollLeft}
-            disabled={!canScrollLeft}
-            className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-              canScrollLeft 
-                ? 'bg-gray-700 hover:bg-gray-600 cursor-pointer hover:scale-110' 
-                : 'bg-gray-800 text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            <i className="fas fa-chevron-left text-sm"></i>
-          </button>
-          
-          <button 
-            onClick={scrollRight}
-            disabled={!canScrollRight}
-            className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-              canScrollRight 
-                ? 'bg-gray-700 hover:bg-gray-600 cursor-pointer hover:scale-110' 
-                : 'bg-gray-800 text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            <i className="fas fa-chevron-right text-sm"></i>
-          </button>
-          
-          <button 
-            onClick={scrollToEnd}
-            className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-200 text-xs hover:scale-110"
-            title="Go to end"
-          >
-            <i className="fas fa-angle-double-right"></i>
-          </button>
-        </div>
+        
+        <ShortsNavigation
+          canScrollLeft={canScrollLeft}
+          canScrollRight={canScrollRight}
+          onScrollLeft={scrollLeft}
+          onScrollRight={scrollRight}
+          onScrollToStart={scrollToStart}
+          onScrollToEnd={scrollToEnd}
+        />
       </div>
       
-      {/* Shorts Horizontal Scroll */}
+      {/* Shorts Cards */}
       <div 
         ref={sliderRef}
-        className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide"
+        className="flex space-x-4 overflow-x-auto scrollbar-hide scroll-smooth"
         onScroll={checkScrollButtons}
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {shorts.map((short) => (
           <ShortsCard key={short.id} short={short} />
         ))}
-      </div>
-      
-      {/* Scroll Progress Indicator */}
-      <div className="mt-4 px-4">
-        <div className="w-full bg-gray-700 rounded-full h-1">
-          <div 
-            className="bg-purple-500 h-1 rounded-full transition-all duration-300"
-            style={{ 
-              width: `${canScrollLeft ? '50%' : '0%'}` 
-            }}
-          ></div>
-        </div>
-        <div className="flex justify-between text-xs text-gray-400 mt-2">
-          <span>Scroll to navigate</span>
-          <span>{shorts.length} shorts available</span>
-        </div>
       </div>
     </section>
   )

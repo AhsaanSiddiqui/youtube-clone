@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import BannerSlider from './BannerSlider'
-import ShortsSlider from './ShortsSlider'
-import VideoCard from './VideoCard'
+import BannerSlider from '../components/BannerSlider'
+import ShortsSlider from '../components/ShortsSlider'
+import VideoFilter from '../components/VideoFilter'
+import VideoGrid from '../components/VideoGrid'
 
-const MainContent = ({ sidebarExpanded }) => {
+const Home = ({ sidebarExpanded }) => {
   const [activeFilter, setActiveFilter] = useState('All Video')
 
   const filterCategories = [
@@ -82,60 +83,36 @@ const MainContent = ({ sidebarExpanded }) => {
     <main className={`flex-1 min-h-screen transition-all duration-500 ease-in-out bg-brown-950 ${
       sidebarExpanded ? 'ml-0' : 'ml-0'
     }`}>
-      {/* Featured Video/Hero Section - Now using BannerSlider */}
+      {/* Featured Video/Hero Section */}
       <BannerSlider />
 
       {/* Popular Videos Section */}
-      <section className="mb-8 px-6">
-        <h2 className="text-3xl font-medium mb-6 text-white">Popular Videos</h2>
+      <div className="px-6">
+        <VideoFilter 
+          categories={filterCategories}
+          activeFilter={activeFilter}
+          onFilterChange={handleTabClick}
+        />
         
-        {/* Filter Categories */}
-        <div className="flex space-x-3 mb-8 overflow-x-auto pb-2 scrollbar-hide">
-          {filterCategories.map((category) => (
-            <button
-            key={category}
-            onClick={() => handleTabClick(category)}
-            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 mx-2 border ${
-              activeFilter === category
-                ? 'bg-white text-black shadow-lg scale-105'
-                : 'text-white hover:bg-white hover:text-black hover:scale-105'
-            }`}
-          >
-              {category}
-            </button>
-          ))}
-        </div>
-        
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredVideos.map((video) => (
-            <VideoCard key={video.id} video={video} />
-          ))}
-        </div>
-        
-        {/* No Results Message */}
-        {filteredVideos.length === 0 && (
-          <div className="text-center py-8">
-            <p className="text-gray-400 text-lg">No videos found for "{activeFilter}"</p>
-            <p className="text-gray-500 text-sm">Try selecting a different category</p>
-          </div>
-        )}
-      </section>
+        <VideoGrid 
+          videos={filteredVideos}
+          title="Popular Videos"
+          showNoResults={true}
+          activeFilter={activeFilter}
+        />
+      </div>
 
-      {/* Shorts Section - Now using ShortsSlider */}
+      {/* Shorts Section */}
       <ShortsSlider />
 
       {/* Additional Video Sections */}
-      <section className="mb-8 px-6">
-        <h2 className="text-3xl font-medium mb-6 text-white">More Videos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {popularVideos.map((video) => (
-            <VideoCard key={`additional-${video.id}`} video={video} />
-          ))}
-        </div>
-      </section>
+      <VideoGrid 
+        videos={popularVideos}
+        title="More Videos"
+        showNoResults={false}
+      />
     </main>
   )
 }
 
-export default MainContent 
+export default Home

@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ShortsCard = ({ short }) => {
+  const navigate = useNavigate()
+
   const handleShortClick = () => {
     console.log('Short clicked:', short.title)
-    // Add short video player functionality here
+    // Navigate to video play page with short ID
+    navigate(`/video/${short.id}`)
   }
 
   // Dummy images for different short types

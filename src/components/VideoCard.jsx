@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const VideoCard = ({ video }) => {
+  const navigate = useNavigate()
+
   const handleVideoClick = () => {
     console.log('Video clicked:', video.title)
-    // Add video player functionality here
+    // Navigate to video play page with video ID
+    navigate(`/video/${video.id}`)
   }
 
   // Dummy images for different video types

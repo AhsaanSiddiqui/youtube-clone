@@ -21,12 +21,12 @@ const Sidebar = ({ expanded }) => {
 
   const subscriptionChannels = [
     { 
-      name: 'Shahid Naeem', 
+      name: 'Hello World', 
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
       hasNotification: true
     },
     { 
-      name: 'Chai aur Code', 
+      name: 'Tea With Code', 
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face',
       hasNotification: true
     },
@@ -36,7 +36,7 @@ const Sidebar = ({ expanded }) => {
       hasNotification: false
     },
     { 
-      name: 'Dr Zakir Naik', 
+      name: 'Learning Code Online', 
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
       hasNotification: true
     }
