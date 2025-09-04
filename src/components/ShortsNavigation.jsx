@@ -1,54 +1,26 @@
 import React from 'react'
 
-const ShortsNavigation = ({ 
-  canScrollLeft, 
-  canScrollRight, 
-  onScrollLeft, 
-  onScrollRight, 
-  onScrollToStart, 
-  onScrollToEnd 
-}) => {
+const ShortsNavigation = ({ onNext, onPrevious }) => {
   return (
-    <div className="flex space-x-2">
-      {/* Scroll to Start/End buttons */}
+    <div className="flex flex-col gap-4">
+      {/* Previous Short Button (Up Arrow) */}
       <button 
-        onClick={onScrollToStart}
-        className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-200 text-xs hover:scale-110"
-        title="Go to start"
+        onClick={onPrevious}
+        className="w-16 h-16 bg-gray-800 bg-opacity-80 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition-all shadow-lg"
       >
-        <i className="fas fa-angle-double-left"></i>
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+        </svg>
       </button>
-      
+
+      {/* Next Short Button (Down Arrow) */}
       <button 
-        onClick={onScrollLeft}
-        disabled={!canScrollLeft}
-        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-          canScrollLeft 
-            ? 'bg-gray-700 hover:bg-gray-600 cursor-pointer hover:scale-110' 
-            : 'bg-gray-800 text-gray-500 cursor-not-allowed'
-        }`}
+        onClick={onNext}
+        className="w-16 h-16 bg-gray-800 bg-opacity-80 rounded-full flex items-center justify-center text-white hover:bg-opacity-100 transition-all shadow-lg"
       >
-        <i className="fas fa-chevron-left text-sm"></i>
-      </button>
-      
-      <button 
-        onClick={onScrollRight}
-        disabled={!canScrollRight}
-        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-          canScrollRight 
-            ? 'bg-gray-700 hover:bg-gray-600 cursor-pointer hover:scale-110' 
-            : 'bg-gray-800 text-gray-500 cursor-not-allowed'
-        }`}
-      >
-        <i className="fas fa-chevron-right text-sm"></i>
-      </button>
-      
-      <button 
-        onClick={onScrollToEnd}
-        className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-200 text-xs hover:scale-110"
-        title="Go to end"
-      >
-        <i className="fas fa-angle-double-right"></i>
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+        </svg>
       </button>
     </div>
   )

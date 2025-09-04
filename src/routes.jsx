@@ -2,6 +2,8 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import VideoPlay from './pages/VideoPlay'
+import Shorts from './pages/Shorts'
+import { Account, Notifications, Playback, Privacy, Settings, AdvancedSettings } from './pages/settings'
 
 // Centralized routing configuration
 const AppRoutes = ({ sidebarExpanded }) => {
@@ -13,13 +15,29 @@ const AppRoutes = ({ sidebarExpanded }) => {
       {/* Video Play Route - Dynamic routing for future */}
       <Route path="/video/:videoId" element={<VideoPlay />} />
       
+      {/* Shorts Route */}
+      <Route path="/shorts" element={<Shorts sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Settings Routes */}
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/settings/account" element={<Account sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/settings/notifications" element={<Notifications sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/settings/playback" element={<Playback sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/settings/privacy" element={<Privacy sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/settings/advanced" element={<AdvancedSettings sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Legacy Settings Routes - Redirect to new structure */}
+      <Route path="/account" element={<Account sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/notifications" element={<Notifications sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/playback" element={<Playback sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/privacy" element={<Privacy sidebarExpanded={sidebarExpanded} />} />
+      
       {/* Future Routes - Ready for expansion */}
       {/* <Route path="/channel/:channelId" element={<Channel />} /> */}
       {/* <Route path="/search" element={<SearchResults />} /> */}
       {/* <Route path="/library" element={<Library />} /> */}
       {/* <Route path="/subscriptions" element={<Subscriptions />} /> */}
       {/* <Route path="/trending" element={<Trending />} /> */}
-      {/* <Route path="/shorts" element={<Shorts />} /> */}
       
       {/* 404 Route */}
       <Route path="*" element={

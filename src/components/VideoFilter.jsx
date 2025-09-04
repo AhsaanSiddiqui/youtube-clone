@@ -6,7 +6,7 @@ const VideoFilter = ({
   onFilterChange 
 }) => {
   return (
-    <div className="flex space-x-3 mb-8 overflow-x-auto pb-2 scrollbar-hide">
+    <div className="flex space-x-3 mb-8 overflow-x-auto pb-2 scrollbar-hide px-6">
       {categories.map((category) => (
         <button
           key={category}

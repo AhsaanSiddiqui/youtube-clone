@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import logoWhite from '/assets/logo-white.png'
 
 const Sidebar = ({ expanded }) => {
+  const location = useLocation()
+  
   const navigationItems = [
-    { icon: 'fas fa-home', label: 'Home', active: true },
-    { icon: 'fas fa-play', label: 'Shorts' },
-    { icon: 'fa-solid fa-photo-film', label: 'Subscriptions' },
-    { icon: 'fas fa-user', label: 'You' },
-    { icon: 'fas fa-download', label: 'Downloads' }
+    { icon: 'fas fa-home', label: 'Home', path: '/', active: location.pathname === '/' },
+    { icon: 'fas fa-play', label: 'Shorts', path: '/shorts', active: location.pathname === '/shorts' },
+    { icon: 'fa-solid fa-photo-film', label: 'Subscriptions', path: '/subscriptions', active: location.pathname === '/subscriptions' },
   ]
 
   const youSectionItems = [
@@ -16,7 +17,8 @@ const Sidebar = ({ expanded }) => {
     { icon: 'fas fa-video', label: 'Your videos' },
     { icon: 'fas fa-clock', label: 'Watch Later' },
     { icon: 'fas fa-thumbs-up', label: 'Liked videos' },
-    { icon: 'fas fa-download', label: 'Downloads' }
+    { icon: 'fas fa-download', label: 'Downloads' },
+    { icon: 'fas fa-cog', label: 'Settings', path: '/settings/account', active: location.pathname.startsWith('/settings') }
   ]
 
   const subscriptionChannels = [
@@ -50,7 +52,7 @@ const Sidebar = ({ expanded }) => {
       {/* Main Navigation Section */}
       <div className="space-y-1 px-2">
         {navigationItems.map((item, index) => (
-          <div key={index} className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
+          <Link key={index} to={item.path} className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
             item.active ? 'bg-white/20' : 'hover:bg-white/10'
           }`}>
             <div className="w-10 h-10 flex items-center justify-center">
@@ -61,7 +63,7 @@ const Sidebar = ({ expanded }) => {
                 {item.label}
               </span>
             )}
-          </div>
+          </Link>
         ))}
       </div>
       
@@ -73,14 +75,14 @@ const Sidebar = ({ expanded }) => {
         </div>
         <div className="space-y-1 px-2">
           {youSectionItems.map((item, index) => (
-            <div key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
+            <Link to={item.path} key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
               <div className="w-10 h-10 flex items-center justify-center">
                 <i className={`${item.icon} text-lg text-white`}></i>
               </div>
               {expanded && (
                 <span className="text-sm text-white ml-3">{item.label}</span>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

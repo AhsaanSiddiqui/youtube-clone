@@ -3,7 +3,7 @@ import VideoCard from './VideoCard'
 
 const VideoGrid = ({ videos = [], title, showNoResults = true, activeFilter = '' }) => {
   return (
-    <section className="mb-8 px-6">
+    <section className="mb-0 px-6">
       <h2 className="text-3xl font-medium mb-6 text-white">{title}</h2>
       
       {/* Video Grid */}

@@ -87,7 +87,7 @@ const Home = ({ sidebarExpanded }) => {
       <BannerSlider />
 
       {/* Popular Videos Section */}
-      <div className="px-6">
+      <div className="px-0">
         <VideoFilter 
           categories={filterCategories}
           activeFilter={activeFilter}
