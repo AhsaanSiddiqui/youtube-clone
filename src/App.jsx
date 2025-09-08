@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray-900 text-white min-h-screen">
+      <div className="bg-gray-900 text-white min-h-screen invisible md:visible">
         <Header onMenuClick={toggleSidebar} />
         <div className="flex pt-16">
           <Sidebar expanded={sidebarExpanded} />

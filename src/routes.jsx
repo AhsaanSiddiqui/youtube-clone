@@ -3,6 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import VideoPlay from './pages/VideoPlay'
 import Shorts from './pages/Shorts'
+import Subscriptions from './pages/Subscriptions'
+import AllSubscriptions from './pages/AllSubscriptions'
+import History from './pages/History'
+import Playlists from './pages/Playlists'
 import { Account, Notifications, Playback, Privacy, Settings, AdvancedSettings } from './pages/settings'
 
 // Centralized routing configuration
@@ -17,6 +21,18 @@ const AppRoutes = ({ sidebarExpanded }) => {
       
       {/* Shorts Route */}
       <Route path="/shorts" element={<Shorts sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Subscriptions Route */}
+      <Route path="/subscriptions" element={<Subscriptions sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* All Subscriptions Route */}
+      <Route path="/subscriptions/manage" element={<AllSubscriptions sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* History Route */}
+      <Route path="/history" element={<History sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Playlists Route */}
+      <Route path="/playlists" element={<Playlists sidebarExpanded={sidebarExpanded} />} />
       
       {/* Settings Routes */}
       <Route path="/settings" element={<Settings />} />

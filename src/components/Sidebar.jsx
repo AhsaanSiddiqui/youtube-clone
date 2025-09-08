@@ -12,8 +12,8 @@ const Sidebar = ({ expanded }) => {
   ]
 
   const youSectionItems = [
-    { icon: 'fas fa-history', label: 'History' },
-    { icon: 'fas fa-list', label: 'Playlists' },
+    { icon: 'fas fa-history', label: 'History', path: '/history', active: location.pathname === '/history' },
+    { icon: 'fas fa-list', label: 'Playlists', path: '/playlists', active: location.pathname === '/playlists' },
     { icon: 'fas fa-video', label: 'Your videos' },
     { icon: 'fas fa-clock', label: 'Watch Later' },
     { icon: 'fas fa-thumbs-up', label: 'Liked videos' },
@@ -75,7 +75,13 @@ const Sidebar = ({ expanded }) => {
         </div>
         <div className="space-y-1 px-2">
           {youSectionItems.map((item, index) => (
-            <Link to={item.path} key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
+            <Link 
+              to={item.path || '#'} 
+              key={index} 
+              className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
+                item.active ? 'bg-white/20' : 'hover:bg-white/10'
+              }`}
+            >
               <div className="w-10 h-10 flex items-center justify-center">
                 <i className={`${item.icon} text-lg text-white`}></i>
               </div>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import UserDropdown from './UserDropdown'
+import NotificationsDropdown from './NotificationsDropdown'
 import logoDark from '/assets/logo-dark.png'
 import logoWhite from '/assets/logo-white.png'
 
 const Header = ({ onMenuClick }) => {
   const [searchQuery, setSearchQuery] = useState('')
+  const [showNotifications, setShowNotifications] = useState(false)
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -49,10 +51,23 @@ const Header = ({ onMenuClick }) => {
         {/* Notification Icon */}
         <div className='flex items-center justify-end'>
           
-          <div className="flex items-center mr-4">
-            <button className="w-10 h-10 bg-white hover:bg-amber-200 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105">
+          <div className="flex items-center mr-4 relative">
+            <button 
+              onClick={() => setShowNotifications(!showNotifications)}
+              className="w-10 h-10 bg-white hover:bg-amber-200 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 relative"
+            >
               <i className="fas fa-bell text-black text-lg"></i>
+              {/* Notification Badge */}
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
+                4
+              </span>
             </button>
+            
+            {/* Notifications Dropdown */}
+            <NotificationsDropdown 
+              isOpen={showNotifications}
+              onClose={() => setShowNotifications(false)}
+            />
           </div>
           
           {/* Right Section - User Profile */}
