@@ -11,7 +11,7 @@ const WatchLater = ({ sidebarExpanded }) => {
   const watchLaterVideos = [
     {
       id: 1,
-      title: "AADAT INSTRUMENTAL/BHANWARAY feat. Goher Mumtaz | NESCAFÉ Basement",
+      title: "INSTRUMENTAL feat. | NESCAFÉ Basement",
       channel: "NESCAFÉ Basement",
       views: "45M views",
       duration: "10:36",
@@ -101,7 +101,7 @@ const WatchLater = ({ sidebarExpanded }) => {
                 NESCAFÉ Basement 5
               </div>
               <div className="absolute bottom-3 left-3 text-white text-xs">
-                AADAT INSTRUMENTAL / BHANWARAY feat. Goher Mumtaz
+                INSTRUMENTAL feat. | NESCAFÉ Basement
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const WatchLater = ({ sidebarExpanded }) => {
           <h1 className="text-2xl font-bold text-white mb-2">Watch later</h1>
           
           {/* Creator */}
-          <p className="text-gray-300 text-sm mb-4">Ahsan Zafar</p>
+          <p className="text-gray-300 text-sm mb-4">Surya Wachid</p>
           
           {/* Stats */}
           <div className="text-gray-300 text-sm space-y-1 mb-6">

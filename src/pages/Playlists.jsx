@@ -15,7 +15,7 @@ const Playlists = ({ sidebarExpanded }) => {
       videoCount: 1,
       thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=160&fit=crop",
       overlayText: "NESCAFE Basement 5",
-      overlaySubtext: "AADAT INSTRUMENTAL BHANWARAY feat. Goher Mumtaz",
+      overlaySubtext: "INSTRUMENTAL feat. | NESCAFÉ Basement",
       isDefault: true
     },
     {
