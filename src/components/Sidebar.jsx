@@ -15,7 +15,7 @@ const Sidebar = ({ expanded }) => {
     { icon: 'fas fa-history', label: 'History', path: '/history', active: location.pathname === '/history' },
     { icon: 'fas fa-list', label: 'Playlists', path: '/playlists', active: location.pathname === '/playlists' },
     { icon: 'fas fa-video', label: 'Your videos' },
-    { icon: 'fas fa-clock', label: 'Watch Later' },
+    { icon: 'fas fa-clock', label: 'Watch Later', path: '/watch-later', active: location.pathname === '/watch-later' },
     { icon: 'fas fa-thumbs-up', label: 'Liked videos' },
     { icon: 'fas fa-download', label: 'Downloads' },
     { icon: 'fas fa-cog', label: 'Settings', path: '/settings/account', active: location.pathname.startsWith('/settings') }
