@@ -166,7 +166,7 @@ const WatchLater = ({ sidebarExpanded }) => {
                     <button
                       key={option.value}
                       onClick={() => handleSortSelect(option)}
-                      className={`w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                      className={`w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
                         sortBy === option.value ? 'bg-gray-100' : ''
                       }`}
                     >
@@ -223,35 +223,35 @@ const WatchLater = ({ sidebarExpanded }) => {
                     <div className="absolute top-full right-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
                       <button
                         onClick={() => handleVideoAction('Add to queue', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <Play className="w-4 h-4 text-gray-600" />
                         Add to queue
                       </button>
                       <button
                         onClick={() => handleVideoAction('Save to playlist', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <Bookmark className="w-4 h-4 text-gray-600" />
                         Save to playlist
                       </button>
                       <button
                         onClick={() => handleVideoAction('Remove from Watch later', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <Trash2 className="w-4 h-4 text-gray-600" />
                         Remove from Watch later
                       </button>
                       <button
                         onClick={() => handleVideoAction('Download', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <Download className="w-4 h-4 text-gray-600" />
                         Download
                       </button>
                       <button
                         onClick={() => handleVideoAction('Share', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <Share className="w-4 h-4 text-gray-600" />
                         Share
@@ -262,14 +262,14 @@ const WatchLater = ({ sidebarExpanded }) => {
                       
                       <button
                         onClick={() => handleVideoAction('Move to top', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <ArrowUp className="w-4 h-4 text-gray-600" />
                         Move to top
                       </button>
                       <button
                         onClick={() => handleVideoAction('Move to bottom', video.id)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
+                        className="w-full text-left px-4 py-3 text-gray-700 text-sm hover:bg-gray-50 transition-colors flex items-center gap-3"
                       >
                         <ArrowDown className="w-4 h-4 text-gray-600" />
                         Move to bottom
