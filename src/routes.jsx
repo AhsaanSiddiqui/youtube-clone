@@ -8,6 +8,8 @@ import AllSubscriptions from './pages/AllSubscriptions'
 import History from './pages/History'
 import Playlists from './pages/Playlists'
 import WatchLater from './pages/WatchLater'
+import StudioDashboard from './pages/studio/StudioDashboard'
+import StudioContent from './pages/studio/StudioContent'
 import { Account, Notifications, Playback, Privacy, Settings, AdvancedSettings } from './pages/settings'
 
 // Centralized routing configuration
@@ -37,6 +39,10 @@ const AppRoutes = ({ sidebarExpanded }) => {
       
       {/* Watch Later Route */}
       <Route path="/watch-later" element={<WatchLater sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Studio Routes */}
+      <Route path="/studio/dashboard" element={<StudioDashboard sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/studio/content" element={<StudioContent sidebarExpanded={sidebarExpanded} />} />
       
       {/* Settings Routes */}
       <Route path="/settings" element={<Settings />} />

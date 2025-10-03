@@ -21,6 +21,17 @@ const Sidebar = ({ expanded }) => {
     { icon: 'fas fa-cog', label: 'Settings', path: '/settings/account', active: location.pathname.startsWith('/settings') }
   ]
 
+  const studioSectionItems = [
+    { icon: 'fas fa-th-large', label: 'Dashboard', path: '/studio/dashboard', active: location.pathname === '/studio/dashboard' },
+    { icon: 'fas fa-play', label: 'Content', path: '/studio/content', active: location.pathname === '/studio/content' },
+    { icon: 'fas fa-chart-bar', label: 'Analytics', path: '/studio/analytics', active: location.pathname === '/studio/analytics' },
+    // { icon: 'fas fa-users', label: 'Community', path: '/studio/community', active: location.pathname === '/studio/community' },
+    // { icon: 'fas fa-closed-captioning', label: 'Subtitles', path: '/studio/subtitles', active: location.pathname === '/studio/subtitles' },
+    // { icon: 'fas fa-copyright', label: 'Copyright', path: '/studio/copyright', active: location.pathname === '/studio/copyright' },
+    // { icon: 'fas fa-dollar-sign', label: 'Earn', path: '/studio/earn', active: location.pathname === '/studio/earn' },
+    { icon: 'fas fa-cog', label: 'Studio Settings', path: '/studio/settings', active: location.pathname === '/studio/settings' }
+  ]
+
   const subscriptionChannels = [
     { 
       name: 'Hello World', 
@@ -67,6 +78,31 @@ const Sidebar = ({ expanded }) => {
         ))}
       </div>
       
+      {/* Studio Section */}
+      <div className="mt-6 pt-6 border-t border-gray-600">
+        <div className={`px-4 mb-4 ${expanded ? 'text-left' : 'text-center'}`}>
+          <span className="text-sm text-white font-bold">Studio</span>
+        </div>
+        <div className="space-y-1 px-2">
+          {studioSectionItems.map((item, index) => (
+            <Link 
+              to={item.path || '#'} 
+              key={index} 
+              className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
+                item.active ? 'bg-white/20' : 'hover:bg-white/10'
+              }`}
+            >
+              <div className="w-10 h-10 flex items-center justify-center">
+                <i className={`${item.icon} text-lg text-white`}></i>
+              </div>
+              {expanded && (
+                <span className="text-sm text-white ml-3">{item.label}</span>
+              )}
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* You Section */}
       <div className="mt-6 pt-6 border-t border-gray-600">
         <div className={`px-4 mb-4 ${expanded ? 'flex items-center justify-between' : 'text-center'}`}>
@@ -93,7 +129,7 @@ const Sidebar = ({ expanded }) => {
         </div>
       </div>
 
-      {/* Subscriptions Section */}
+    {/* Subscriptions Section */}
       <div className="mt-6 pt-6 border-t border-gray-600">
         <div className={`px-4 mb-4 ${expanded ? 'text-left' : 'text-center'}`}>
           <span className="text-sm text-white font-bold">Subscriptions</span>
