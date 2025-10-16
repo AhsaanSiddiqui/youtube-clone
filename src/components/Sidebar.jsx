@@ -24,7 +24,7 @@ const Sidebar = ({ expanded }) => {
   const studioSectionItems = [
     { icon: 'fas fa-th-large', label: 'Dashboard', path: '/studio/dashboard', active: location.pathname === '/studio/dashboard' },
     { icon: 'fas fa-play', label: 'Content', path: '/studio/content', active: location.pathname === '/studio/content' },
-    { icon: 'fas fa-chart-bar', label: 'Analytics', path: '/studio/analytics', active: location.pathname === '/studio/analytics' },
+    // { icon: 'fas fa-chart-bar', label: 'Analytics', path: '/studio/analytics', active: location.pathname === '/studio/analytics' },
     // { icon: 'fas fa-users', label: 'Community', path: '/studio/community', active: location.pathname === '/studio/community' },
     // { icon: 'fas fa-closed-captioning', label: 'Subtitles', path: '/studio/subtitles', active: location.pathname === '/studio/subtitles' },
     // { icon: 'fas fa-copyright', label: 'Copyright', path: '/studio/copyright', active: location.pathname === '/studio/copyright' },

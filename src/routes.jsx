@@ -10,6 +10,7 @@ import Playlists from './pages/Playlists'
 import WatchLater from './pages/WatchLater'
 import StudioDashboard from './pages/studio/StudioDashboard'
 import StudioContent from './pages/studio/StudioContent'
+import StudioSettings from './pages/studio/StudioSettings'
 import { Account, Notifications, Playback, Privacy, Settings, AdvancedSettings } from './pages/settings'
 
 // Centralized routing configuration
@@ -43,6 +44,7 @@ const AppRoutes = ({ sidebarExpanded }) => {
       {/* Studio Routes */}
       <Route path="/studio/dashboard" element={<StudioDashboard sidebarExpanded={sidebarExpanded} />} />
       <Route path="/studio/content" element={<StudioContent sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/studio/settings" element={<StudioSettings sidebarExpanded={sidebarExpanded} />} />
       
       {/* Settings Routes */}
       <Route path="/settings" element={<Settings />} />
