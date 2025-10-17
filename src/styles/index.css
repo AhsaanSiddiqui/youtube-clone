@@ -136,6 +136,46 @@
   }
 }
 
+/* Mobile-only block overlay (<=575px) */
+.mobile-block-overlay {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* Hide the app shell and show overlay on small devices */
+  body > #root > *:not(.mobile-block-overlay) {
+    display: none !important;
+  }
+
+  .mobile-block-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+  }
+
+  .mobile-block-card {
+    background: #111827; /* gray-900 */
+    color: #ffffff;
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem;
+    max-width: 22rem; /* ~352px */
+    width: calc(100% - 2rem);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+  }
+
+  .mobile-block-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    line-height: 1.5rem;
+  }
+}
+
 @keyframes dropdownExit {
   from {
     opacity: 1;
