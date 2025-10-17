@@ -9,8 +9,8 @@ const StudioSettings = ({ sidebarExpanded }) => {
     { id: 'channel', name: 'Channel' },
     { id: 'upload-defaults', name: 'Upload defaults' },
     { id: 'permissions', name: 'Permissions' },
-    { id: 'community-moderation', name: 'Community moderation' },
-    { id: 'agreements', name: 'Agreements' }
+    // { id: 'community-moderation', name: 'Community moderation' },
+    // { id: 'agreements', name: 'Agreements' }
   ]
 
   const currencyOptions = [
@@ -148,11 +148,7 @@ const StudioSettings = ({ sidebarExpanded }) => {
                       {section.name}
                     </button>
                   ))}
-                  <div className="mt-6">
-                    <button className="w-full text-left px-2 py-2 text-sm text-gray-500 hover:text-gray-700">
-                      See more
-                    </button>
-                  </div>
+                  
                 </nav>
               </div>
             </div>
