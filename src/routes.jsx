@@ -12,6 +12,11 @@ import StudioDashboard from './pages/studio/StudioDashboard'
 import StudioContent from './pages/studio/StudioContent'
 import StudioSettings from './pages/studio/StudioSettings'
 import { Account, Notifications, Playback, Privacy, Settings, AdvancedSettings } from './pages/settings'
+import About from './pages/About'
+import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import PoliciesSafety from './pages/PoliciesSafety'
+import Copyright from './pages/Copyright'
 
 // Centralized routing configuration
 const AppRoutes = ({ sidebarExpanded }) => {
@@ -66,6 +71,15 @@ const AppRoutes = ({ sidebarExpanded }) => {
       {/* <Route path="/library" element={<Library />} /> */}
       {/* <Route path="/subscriptions" element={<Subscriptions />} /> */}
       {/* <Route path="/trending" element={<Trending />} /> */}
+      
+      {/* About Route */}
+      <Route path="/about" element={<About sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Legal/Policy Routes */}
+      <Route path="/terms" element={<TermsOfService sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/privacy" element={<PrivacyPolicy sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/policies" element={<PoliciesSafety sidebarExpanded={sidebarExpanded} />} />
+      <Route path="/copyright" element={<Copyright sidebarExpanded={sidebarExpanded} />} />
       
       {/* 404 Route */}
       <Route path="*" element={
