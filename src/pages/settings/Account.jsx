@@ -7,7 +7,7 @@ const Account = ({ sidebarExpanded }) => {
       <div className="flex items-start justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Account</h1>
-          <p className="text-lg text-gray-600">Choose how you appear and what you see on YouTube</p>
+          <p className="text-lg text-gray-600">Choose how you appear and what you see on Essence Of Me</p>
           <p className="text-sm text-gray-500 mt-2">Signed in as suryawachid77@gmail.com</p>
         </div>
         <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
@@ -19,10 +19,10 @@ const Account = ({ sidebarExpanded }) => {
         </div>
       </div>
 
-      {/* Your YouTube channel section */}
+      {/* Your Essence Of Me channel section */}
       <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Your YouTube channel</h2>
-        <p className="text-gray-600 mb-6">This is your public presence on YouTube. You need a channel to upload your own videos, comment on videos, or create playlists.</p>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Essence Of Me channel</h2>
+        <p className="text-gray-600 mb-6">This is your public presence on Essence Of Me. You need a channel to upload your own videos, comment on videos, or create playlists.</p>
         
         <div className="flex items-center gap-4 mb-4">
           <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -43,7 +43,7 @@ const Account = ({ sidebarExpanded }) => {
       {/* Your account section */}
       <div className="bg-white border border-gray-200 rounded-lg p-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Your account</h2>
-        <p className="text-gray-600 mb-6">You sign in to YouTube with your Google Account</p>
+        <p className="text-gray-600 mb-6">You sign in to Essence Of Me with your Google Account</p>
         
         <div className="space-y-6">
           <div>
@@ -55,7 +55,7 @@ const Account = ({ sidebarExpanded }) => {
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-2">Family Center</h3>
             <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Manage kids profiles and features for teens</a>
-            <p className="text-gray-500 text-sm mt-1">Tools to connect parents, kids, and teens on YouTube</p>
+            <p className="text-gray-500 text-sm mt-1">Tools to connect parents, kids, and teens on Essence Of Me</p>
           </div>
           
           <div>
@@ -63,9 +63,9 @@ const Account = ({ sidebarExpanded }) => {
             <div className="flex items-center gap-2">
               <span className="text-gray-600 text-sm">No membership</span>
               <span className="text-gray-400">|</span>
-              <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Get YouTube Premium</a>
+              <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Get Essence Of Me Premium</a>
             </div>
-            <p className="text-gray-500 text-sm mt-1">YouTube Premium offers uninterrupted music, ad-free videos, and more</p>
+            <p className="text-gray-500 text-sm mt-1">Essence Of Me Premium offers uninterrupted music, ad-free videos, and more</p>
           </div>
         </div>
       </div>

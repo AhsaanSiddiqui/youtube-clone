@@ -21,10 +21,10 @@ const Privacy = ({ sidebarExpanded }) => {
       <div className="flex items-start justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy</h1>
-          <p className="text-lg text-gray-600">Manage what you share on YouTube</p>
+          <p className="text-lg text-gray-600">Manage what you share on Essence Of Me</p>
           <p className="text-sm text-gray-500 mt-2">Choose who can see your subscriptions</p>
           <div className="mt-4 space-x-4">
-            <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Review YouTube Terms of Service</a>
+            <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Review Essence Of Me Terms of Service</a>
             <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Google Privacy Policy</a>
           </div>
         </div>
@@ -131,11 +131,11 @@ const Privacy = ({ sidebarExpanded }) => {
         </div>
       </div>
 
-      {/* Ads on YouTube Section */}
+      {/* Ads on Essence Of Me Section */}
       <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Ads on YouTube</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Ads on Essence Of Me</h2>
         <p className="text-sm text-gray-600">
-          You may see ads on YouTube based on general factors, like the topic of a video. The ads you see may also depend on your choices on 
+          You may see ads on Essence Of Me based on general factors, like the topic of a video. The ads you see may also depend on your choices on 
           <a href="#" className="text-blue-600 hover:text-blue-800 ml-1">My Ad Center</a>. To learn more about how ads work for family accounts with kids, visit the 
           <a href="#" className="text-blue-600 hover:text-blue-800 ml-1">Google for Families Help Center</a>.
         </p>

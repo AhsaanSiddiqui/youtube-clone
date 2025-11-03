@@ -525,7 +525,7 @@ const History = ({ sidebarExpanded }) => {
               {/* Warning Message */}
               <div className="mb-6">
                 <p className="text-sm text-gray-700 mb-3">
-                  Your YouTube watch history will be cleared from all YouTube apps on all devices.
+                  Your Essence Of Me watch history will be cleared from all Essence Of Me apps on all devices.
                 </p>
                 <p className="text-sm text-gray-700">
                   Your video recommendations will be reset, but may still be influenced by activity on other Google products. To learn more, visit{' '}

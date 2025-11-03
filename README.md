@@ -1,11 +1,11 @@
 # Project Name - React Video Platform
 
-A modern YouTube-style video platform built with React.js and Tailwind CSS, featuring a dark theme and responsive design.
+A modern Essence Of Me-style video platform built with React.js and Tailwind CSS, featuring a dark theme and responsive design.
 
 ## 🚀 Features
 
 - **React.js Architecture**: Modern component-based structure with hooks
-- **YouTube-Style Layout**: Top header, left sidebar, and main content area
+- **Essence Of Me-Style Layout**: Top header, left sidebar, and main content area
 - **Dark Theme**: Beautiful dark interface with purple accents
 - **Responsive Design**: Works perfectly on all devices
 - **Interactive Components**: Hover effects, state management, and smooth animations
@@ -33,7 +33,7 @@ A modern YouTube-style video platform built with React.js and Tailwind CSS, feat
 ## 📁 Project Structure
 
 ```
-youtube-demo/
+Essence Of Me-demo/
 ├── src/
 │   ├── components/
 │   │   ├── Header.jsx          # Top header with search

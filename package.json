@@ -1,7 +1,7 @@
 {
-  "name": "youtube-demo",
+  "name": "Essence Of Me-demo",
   "version": "1.0.0",
-  "description": "YouTube demo project with React and Tailwind CSS",
+  "description": "Essence Of Me demo project with React and Tailwind CSS",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,7 @@
     "react",
     "tailwind",
     "css",
-    "youtube"
+    "Essence Of Me"
   ],
   "author": "",
   "license": "MIT",

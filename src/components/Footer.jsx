@@ -26,16 +26,16 @@ const Footer = () => {
       {/* Main Footer Links */}
       <div className="bg-gray-100 py-8 px-8 hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-5 gap-8">
-          {/* About YouTube */}
+          {/* About Essence Of Me */}
           <div>
-            <h3 className="font-semibold mb-3">About YouTube</h3>
+            <h3 className="font-semibold mb-3">About Essence Of Me</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">About</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">How YouTube Works</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">How Essence Of Me Works</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Jobs</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Press</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Culture & Trends</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Culture & Trends</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">NFL Sunday Ticket</a></li>
             </ul>
           </div>
@@ -44,14 +44,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">Products</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Kids</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Music</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Originals</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Podcasts</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Premium</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Select</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Studio</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube TV</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Kids</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Music</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Originals</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Podcasts</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Premium</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Select</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Studio</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me TV</a></li>
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-3">For Business</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Developers</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Advertising</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Advertising</a></li>
             </ul>
           </div>
 
@@ -68,13 +68,13 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">For Creators</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Creating for YouTube Kids</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Creating for Essence Of Me Kids</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Creator Research</a></li>
               <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Creator Services Directory</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Artists</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube Creators</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube NextUp</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">YouTube VR</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Artists</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me Creators</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me NextUp</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Essence Of Me VR</a></li>
             </ul>
           </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img src={logoWhite} alt="Logo" className="h-6 w-auto" />
-            <span className="text-gray-900 font-medium">YouTube</span>
+            <span className="text-gray-900 font-medium">Essence Of Me</span>
           </div>
           
           <div className="flex items-center gap-4">

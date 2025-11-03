@@ -65,7 +65,7 @@ const Notifications = ({ sidebarExpanded }) => {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
-            <span>Receive notifications on your computer, even if you're not watching YouTube.</span>
+            <span>Receive notifications on your computer, even if you're not watching Essence Of Me.</span>
           </div>
         </div>
 
@@ -103,12 +103,12 @@ const Notifications = ({ sidebarExpanded }) => {
       {/* Email notifications */}
       <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Email notifications</h2>
-        <p className="text-gray-600 mb-6">Your emails are sent to az3226117@gmail.com. To unsubscribe from an email, click the 'Unsubscribe' link at the bottom of it. Learn more about emails from YouTube.</p>
+        <p className="text-gray-600 mb-6">Your emails are sent to az3226117@gmail.com. To unsubscribe from an email, click the 'Unsubscribe' link at the bottom of it. Learn more about emails from Essence Of Me.</p>
         
         {/* Your family */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-900">Send me emails about family and product updates for YouTube or YouTube Kids</span>
+            <span className="text-sm font-medium text-gray-900">Send me emails about family and product updates for Essence Of Me or Essence Of Me Kids</span>
             <button 
               onClick={() => handleToggle('familyEmails')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -126,7 +126,7 @@ const Notifications = ({ sidebarExpanded }) => {
         {/* Permission */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-900">Send me emails about my YouTube activity and updates I requested</span>
+            <span className="text-sm font-medium text-gray-900">Send me emails about my Essence Of Me activity and updates I requested</span>
             <button 
               onClick={() => handleToggle('permissionEmails')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -138,7 +138,7 @@ const Notifications = ({ sidebarExpanded }) => {
               }`} />
             </button>
           </div>
-          <p className="text-sm text-gray-500">If this setting is turned off, YouTube may still send you messages regarding your account, required service announcements, legal notifications, and privacy matters</p>
+          <p className="text-sm text-gray-500">If this setting is turned off, Essence Of Me may still send you messages regarding your account, required service announcements, legal notifications, and privacy matters</p>
         </div>
 
         {/* Your preferences */}
@@ -147,8 +147,8 @@ const Notifications = ({ sidebarExpanded }) => {
           <div className="space-y-4">
             {[
               { key: 'generalUpdates', label: 'General product updates: Announcements and recommendations' },
-              { key: 'premiumUpdates', label: 'YouTube Premium updates: Announcements, updates, and recommendations from YouTube Premium and YouTube Music Premium' },
-              { key: 'creatorUpdates', label: 'Creator updates and announcements: Product announcements, creator events, and personalized tips to grow your YouTube channel' }
+              { key: 'premiumUpdates', label: 'Essence Of Me Premium updates: Announcements, updates, and recommendations from Essence Of Me Premium and Essence Of Me Music Premium' },
+              { key: 'creatorUpdates', label: 'Creator updates and announcements: Product announcements, creator events, and personalized tips to grow your Essence Of Me channel' }
             ].map(({ key, label }) => (
               <div key={key} className="flex items-center justify-between">
                 <span className="text-sm text-gray-900">{label}</span>

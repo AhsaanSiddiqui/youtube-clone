@@ -21,7 +21,7 @@ const AdvancedSettings = ({ sidebarExpanded }) => {
       <div className="flex items-start justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Advanced settings</h1>
-          <p className="text-lg text-gray-600">Set up YouTube exactly how you want it</p>
+          <p className="text-lg text-gray-600">Set up Essence Of Me exactly how you want it</p>
         </div>
         <div className="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center">
           <div className="w-16 h-16 bg-teal-200 rounded-full flex items-center justify-center">
@@ -107,7 +107,7 @@ const AdvancedSettings = ({ sidebarExpanded }) => {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-lg font-medium text-gray-900 mb-2">Delete channel</h2>
-            <p className="text-sm text-gray-600 mb-3">Deleting your YouTube channel won't close your Google Account</p>
+            <p className="text-sm text-gray-600 mb-3">Deleting your Essence Of Me channel won't close your Google Account</p>
             <a 
               href="#" 
               className="text-blue-600 hover:text-blue-800 text-sm font-medium"

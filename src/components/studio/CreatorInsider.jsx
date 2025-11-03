@@ -28,7 +28,7 @@ const CreatorInsider = () => {
           className="w-full h-32 object-cover rounded-lg"
         />
         <div className="absolute top-2 left-2 text-white text-xs font-bold bg-black/70 px-2 py-1 rounded">
-          THIS WEEK AT YOUTUBE
+          THIS WEEK AT Essence Of Me
         </div>
         <div className="absolute top-2 right-2">
           <div className="bg-black/70 text-white text-xs px-2 py-1 rounded">
@@ -40,14 +40,14 @@ const CreatorInsider = () => {
       {/* Content */}
       <div className="space-y-3">
         <h4 className="font-medium text-gray-900 text-sm">
-          This Week at YouTube
+          This Week at Essence Of Me
         </h4>
         <p className="text-xs text-gray-600 leading-relaxed">
-          Today topics: Made on YouTube event, additional features like AI and Image Stickers, and new gifts for National Video Games Day
+          Today topics: Made on Essence Of Me event, additional features like AI and Image Stickers, and new gifts for National Video Games Day
         </p>
         <div className="flex items-center justify-between">
           <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs font-medium">
-            Watch on YouTube
+            Watch on Essence Of Me
           </button>
           <div className="text-xs text-gray-400">
             BLACKBOX

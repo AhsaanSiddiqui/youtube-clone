@@ -1,10 +1,10 @@
-// YouTube API service configuration and functions
-// This file will handle all YouTube API calls when you're ready to integrate
+// Essence Of Me API service configuration and functions
+// This file will handle all Essence Of Me API calls when you're ready to integrate
 
 // Base configuration
 const API_CONFIG = {
-  baseURL: 'https://www.googleapis.com/youtube/v3',
-  apiKey: process.env.REACT_APP_YOUTUBE_API_KEY || 'YOUR_API_KEY_HERE',
+  baseURL: 'https://www.googleapis.com/Essence Of Me/v3',
+  apiKey: process.env.REACT_APP_Essence Of Me_API_KEY || 'YOUR_API_KEY_HERE',
   maxResults: 25,
 };
 

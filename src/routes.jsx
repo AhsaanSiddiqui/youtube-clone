@@ -8,6 +8,7 @@ import AllSubscriptions from './pages/AllSubscriptions'
 import History from './pages/History'
 import Playlists from './pages/Playlists'
 import WatchLater from './pages/WatchLater'
+import LikedVideos from './pages/LikedVideos'
 import StudioDashboard from './pages/studio/StudioDashboard'
 import StudioContent from './pages/studio/StudioContent'
 import StudioSettings from './pages/studio/StudioSettings'
@@ -17,11 +18,19 @@ import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import PoliciesSafety from './pages/PoliciesSafety'
 import Copyright from './pages/Copyright'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import ForgotPassword from './pages/ForgotPassword'
 
 // Centralized routing configuration
 const AppRoutes = ({ sidebarExpanded }) => {
   return (
     <Routes>
+      {/* Auth Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      
       {/* Home Route */}
       <Route path="/" element={<Home sidebarExpanded={sidebarExpanded} />} />
       
@@ -45,6 +54,9 @@ const AppRoutes = ({ sidebarExpanded }) => {
       
       {/* Watch Later Route */}
       <Route path="/watch-later" element={<WatchLater sidebarExpanded={sidebarExpanded} />} />
+      
+      {/* Liked Videos Route */}
+      <Route path="/liked-videos" element={<LikedVideos sidebarExpanded={sidebarExpanded} />} />
       
       {/* Studio Routes */}
       <Route path="/studio/dashboard" element={<StudioDashboard sidebarExpanded={sidebarExpanded} />} />

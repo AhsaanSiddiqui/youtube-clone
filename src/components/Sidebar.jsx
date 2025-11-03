@@ -14,16 +14,16 @@ const Sidebar = ({ expanded }) => {
   const youSectionItems = [
     { icon: 'fas fa-history', label: 'History', path: '/history', active: location.pathname === '/history' },
     { icon: 'fas fa-list', label: 'Playlists', path: '/playlists', active: location.pathname === '/playlists' },
-    { icon: 'fas fa-video', label: 'Your videos' },
+    // { icon: 'fas fa-video', label: 'Your videos', path: '/studio/content', active: location.pathname === '/studio/content' },
     { icon: 'fas fa-clock', label: 'Watch Later', path: '/watch-later', active: location.pathname === '/watch-later' },
-    { icon: 'fas fa-thumbs-up', label: 'Liked videos' },
-    { icon: 'fas fa-download', label: 'Downloads' },
+    { icon: 'fas fa-thumbs-up', label: 'Liked videos', path: '/liked-videos', active: location.pathname === '/liked-videos' },
+    // { icon: 'fas fa-download', label: 'Downloads' },
     { icon: 'fas fa-cog', label: 'Settings', path: '/settings/account', active: location.pathname.startsWith('/settings') }
   ]
 
   const studioSectionItems = [
     { icon: 'fas fa-th-large', label: 'Dashboard', path: '/studio/dashboard', active: location.pathname === '/studio/dashboard' },
-    { icon: 'fas fa-play', label: 'Content', path: '/studio/content', active: location.pathname === '/studio/content' },
+    { icon: 'fas fa-play', label: 'Your videos', path: '/studio/content', active: location.pathname === '/studio/content' },
     // { icon: 'fas fa-chart-bar', label: 'Analytics', path: '/studio/analytics', active: location.pathname === '/studio/analytics' },
     // { icon: 'fas fa-users', label: 'Community', path: '/studio/community', active: location.pathname === '/studio/community' },
     // { icon: 'fas fa-closed-captioning', label: 'Subtitles', path: '/studio/subtitles', active: location.pathname === '/studio/subtitles' },
@@ -32,31 +32,16 @@ const Sidebar = ({ expanded }) => {
     { icon: 'fas fa-cog', label: 'Studio Settings', path: '/studio/settings', active: location.pathname === '/studio/settings' }
   ]
 
-  const subscriptionChannels = [
-    { 
-      name: 'Hello World', 
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-      hasNotification: true
-    },
-    { 
-      name: 'Tea With Code', 
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face',
-      hasNotification: true
-    },
-    { 
-      name: 'JavaScript Mastery', 
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
-      hasNotification: false
-    },
-    { 
-      name: 'Learning Code Online', 
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-      hasNotification: true
-    }
+  const policySectionItems = [
+    { icon: 'fas fa-info-circle', label: 'About', path: '/about', active: location.pathname === '/about' },
+    { icon: 'fas fa-file-contract', label: 'Terms', path: '/terms', active: location.pathname === '/terms' },
+    { icon: 'fas fa-user-shield', label: 'Privacy', path: '/privacy', active: location.pathname === '/privacy' },
+    { icon: 'fas fa-shield-alt', label: 'Policies & Safety', path: '/policies', active: location.pathname === '/policies' },
+    { icon: 'fas fa-copyright', label: 'Copyright', path: '/copyright', active: location.pathname === '/copyright' }
   ]
 
   return (
-    <aside className={`bg-brown-950 border-r border-gray-500 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 ${
+    <aside className={`bg-brown-950 border-r border-gray-500 pt-6 transition-all duration-500 ease-in-out flex-shrink-0 h-full overflow-y-auto scrollbar-hide ${
       expanded ? 'w-56' : 'w-16'
     }`}>
 
@@ -129,28 +114,27 @@ const Sidebar = ({ expanded }) => {
         </div>
       </div>
 
-    {/* Subscriptions Section */}
+    {/* Policy Section */}
       <div className="mt-6 pt-6 border-t border-gray-600">
         <div className={`px-4 mb-4 ${expanded ? 'text-left' : 'text-center'}`}>
-          <span className="text-sm text-white font-bold">Subscriptions</span>
+          <span className="text-sm text-white font-bold">Legal & Policies</span>
         </div>
         <div className="space-y-1 px-2">
-          {subscriptionChannels.map((channel, index) => (
-            <div key={index} className="flex cursor-pointer items-center rounded-lg px-3 py-2 hover:bg-white/10">
-              <div className="relative">
-                <img 
-                  src={channel.image} 
-                  alt={channel.name}
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                {channel.hasNotification && (
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></div>
-                )}
+          {policySectionItems.map((item, index) => (
+            <Link 
+              to={item.path} 
+              key={index} 
+              className={`flex cursor-pointer items-center rounded-lg px-3 py-2 ${
+                item.active ? 'bg-white/20' : 'hover:bg-white/10'
+              }`}
+            >
+              <div className="w-10 h-10 flex items-center justify-center">
+                <i className={`${item.icon} text-lg text-white`}></i>
               </div>
               {expanded && (
-                <span className="text-sm text-white ml-3">{channel.name}</span>
+                <span className="text-sm text-white ml-3">{item.label}</span>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

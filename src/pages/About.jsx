@@ -97,12 +97,12 @@ const About = ({ sidebarExpanded }) => {
         </div>
       </div>
 
-      {/* About YouTube Section */}
+      {/* About Essence Of Me Section */}
       <div className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-8">
           <div className="flex items-start justify-between gap-12">
             <div className="flex-1">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">About YouTube</h1>
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">About Essence Of Me</h1>
               
               <div className="space-y-4 text-gray-700">
                 <p className="text-lg leading-relaxed">

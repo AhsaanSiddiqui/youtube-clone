@@ -13,11 +13,13 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray-900 text-white min-h-screen invisible md:visible">
+      <div className="bg-gray-900 text-white h-screen flex flex-col invisible md:visible">
         <Header onMenuClick={toggleSidebar} />
-        <div className="flex pt-16">
+        <div className="flex flex-1 overflow-hidden pt-16">
           <Sidebar expanded={sidebarExpanded} />
-          <AppRoutes sidebarExpanded={sidebarExpanded} />
+          <div className="flex-1 overflow-y-auto scrollbar-hide">
+            <AppRoutes sidebarExpanded={sidebarExpanded} />
+          </div>
         </div>
       </div>
 
