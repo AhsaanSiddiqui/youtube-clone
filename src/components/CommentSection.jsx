@@ -58,7 +58,7 @@ const CommentSection = ({ comments = [] }) => {
             placeholder="Add a comment..."
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-2 focus:outline-none focus:border-white transition-colors duration-200"
+            className="w-full bg-transparent border-b border-gray-600 text-gray-700 placeholder-gray-400 py-2 focus:outline-none focus:border-white transition-colors duration-200"
           />
         </div>
         <button 
@@ -186,7 +186,7 @@ const CommentItem = ({
                 placeholder="Add a reply..."
                 value={replyText}
                 onChange={(e) => onReplyTextChange(e.target.value)}
-                className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-2 focus:outline-none focus:border-white transition-colors duration-200"
+                className="w-full bg-transparent border-b border-gray-600 text-gray-700 placeholder-gray-400 py-2 focus:outline-none focus:border-white transition-colors duration-200"
               />
             </div>
           </div>
@@ -311,7 +311,7 @@ const ReplyItem = ({
                 placeholder="Add a reply..."
                 value={replyText}
                 onChange={(e) => onReplyTextChange(e.target.value)}
-                className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-1 focus:outline-none focus:border-white transition-colors duration-200 text-sm"
+                className="w-full bg-transparent border-b border-gray-600 text-gray-700 placeholder-gray-400 py-1 focus:outline-none focus:border-white transition-colors duration-200 text-sm"
               />
             </div>
           </div>

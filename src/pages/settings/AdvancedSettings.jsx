@@ -42,7 +42,7 @@ const AdvancedSettings = ({ sidebarExpanded }) => {
                 type="text" 
                 value="5coeSwpahO9GD-Xscmj0-A"
                 readOnly
-                className="px-3 py-2 border border-gray-300 rounded-md bg-gray-50 text-gray-700 text-sm font-mono"
+                className="px-3 py-2 text-gray-700 border border-gray-300 rounded-md bg-gray-50 text-gray-700 text-sm font-mono"
               />
               <button 
                 onClick={() => handleCopy('5coeSwpahO9GD-Xscmj0-A', 'userId')}
@@ -69,7 +69,7 @@ const AdvancedSettings = ({ sidebarExpanded }) => {
                 type="text" 
                 value="UC5coeSwpahO9GD-Xscmj0-A"
                 readOnly
-                className="px-3 py-2 border border-gray-300 rounded-md bg-gray-50 text-gray-700 text-sm font-mono"
+                className="px-3 py-2 text-gray-700 border border-gray-300 rounded-md bg-gray-50 text-gray-700 text-sm font-mono"
               />
               <button 
                 onClick={() => handleCopy('UC5coeSwpahO9GD-Xscmj0-A', 'channelId')}
